@@ -29,12 +29,11 @@ Usage
 -----
 
 ```
-$ alias jupyter='docker run -it --rm -v $PWD:/workspace registry.gitlab.com/gbraad/jupyter:f24'
+$ alias jupyter='docker run -it --rm -p 8888:8888 -v $PWD:/workspace registry.gitlab.com/gbraad/jupyter:f24 jupyter --no-browser'
 $ jupyter notebook
 ```
 
-and open your browser to `http://localhost:8888` [http://localhost:8888](http://localhost:8888)
-
+and open your browser to [http://localhost:8888](http://localhost:8888)
 
 
 Authors

@@ -14,4 +14,4 @@ WORKDIR /workspace
 
 EXPOSE 8888
 
-CMD ["jupyter"]
+CMD ["jupyter", "notebook", "--no-browser"]
