@@ -29,7 +29,7 @@ Usage
 -----
 
 ```
-$ alias jupyter='docker run -it --rm -p 8888:8888 -v $PWD:/workspace registry.gitlab.com/gbraad/jupyter:f24 jupyter --no-browser'
+$ alias jupyter='docker run -it --rm -p 8888:8888 -v $PWD:/workspace registry.gitlab.com/gbraad/jupyter:f24 jupyter --no-browser --allow-root'
 $ jupyter notebook
 ```
 

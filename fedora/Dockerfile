@@ -1,11 +1,8 @@
 FROM registry.gitlab.com/gbraad/fedora:24
 MAINTAINER Gerard Braad <me@gbraad.nl>
 
-RUN dnf install -y python3-devel redhat-rpm-config gcc-c++ @'Development Tools'; \
-
+RUN pip3 install --upgrade pip; \
     pip3 install jupyter; \
-
-    dnf remove -y python3-devel redhat-rpm-config gcc-c++ @'Development Tools'; \
 
     mkdir -p /workspace
 
@@ -14,4 +11,4 @@ WORKDIR /workspace
 
 EXPOSE 8888
 
-CMD ["jupyter", "notebook", "--no-browser"]
+CMD ["jupyter", "notebook", "--no-browser", "--allow-root"]
